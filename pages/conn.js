@@ -1,7 +1,6 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
-const port = 3000
 const pool = require('../pages/queries');
 
 app.use(bodyParser.json())
@@ -218,6 +217,6 @@ app.delete('/detail2/:tid', async (req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`App running on port ${port}.`)
+app.listen(process.env.PORT, () => {
+  console.log(`App running...`)
 })
