@@ -1,56 +1,18 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "./index.js",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      { 
-        "src": "/",
-         "dest": "/index.js"
-         },
-      { 
-        "src": "/register", 
-        "dest": "/index.js" 
-      },
-      { 
-        "src": "/topic", 
-        "dest": "/index.js" 
-      },
-      {
-         "src": "/subtopic", 
-         "dest": "/index.js" 
-        },
-      { 
-        "src": "/detail", 
-        "dest": "/index.js" 
-      },
-      {
-         "src": "/detail2", 
-         "dest": "/index.js" 
-        },
-      { 
-        "src": "/register/(.*)", 
-        "dest": "/index.js" 
-      },
-      {
-         "src": "/topic/(.*)", 
-         "dest": "/index.js" 
-        },
-      { 
-        "src": "/subtopic/(.*)", 
-        "dest": "/index.js" 
-      },
-      { 
-        "src": "/detail/(.*)", 
-        "dest": "/index.js"
-       },
-      {
-         "src": "/detail2/(.*)", 
-         "dest": "/index.js" 
-        }
-    ]
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.js"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production"
   }
-  
+}
